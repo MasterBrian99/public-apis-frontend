@@ -1,7 +1,5 @@
 import React from "react";
-import {HiArrowNarrowRight,HiOutlineSearch} from 'react-icons/hi';
-
-
+import { HiArrowNarrowRight, HiOutlineSearch } from "react-icons/hi";
 
 const Hero = () => {
   return (
@@ -14,11 +12,23 @@ const Hero = () => {
         reprehenderit!
       </p>
       <div className="flex pt-2 pb-2">
-        <a href="/" className="flex items-center justify-center p-3 mr-2 text-sm text-white rounded-lg bg-aquo">
-          BROWSE CATEGORIES <span className="pl-2"><HiArrowNarrowRight size={'1.4rem'}/></span>
+        <a
+          href="/"
+          className="flex items-center justify-center p-3 ml-2 text-sm text-white rounded-lg shadow-xl bg-aquo bg-gradient-to-r from-aquo to-aquo-dark hover:from-aquo-dark hover:to-aquo"
+        >
+          BROWSE CATEGORIES{" "}
+          <span className="pl-2">
+            <HiArrowNarrowRight size={"1.4rem"} />
+          </span>
         </a>
-        <a href="/" className="flex items-center justify-center p-3 ml-2 text-sm text-white rounded-lg bg-aquo ">
-          SEARCH APIs <span  className="pl-2"><HiOutlineSearch size={'1.4rem'}/></span>
+        <a
+          href="/"
+          className="flex items-center justify-center p-3 ml-2 text-sm text-white rounded-lg shadow-xl bg-aquo bg-gradient-to-r from-aquo to-aquo-dark hover:from-aquo-dark hover:to-aquo"
+        >
+          SEARCH APIs{" "}
+          <span className="pl-2">
+            <HiOutlineSearch size={"1.4rem"} />
+          </span>
         </a>
       </div>
     </div>

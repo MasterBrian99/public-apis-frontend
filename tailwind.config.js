@@ -8,7 +8,11 @@ module.exports = {
         "primary":"#F8FCFF",
         "secondary":"#1CC4CA",
         "aquo":"#2B80AB",
-        "aniston":"#2A8D91"
+        "aquo-dark":"#1B76A3",
+        "aniston":"#2A8D91",
+        "aniston-light":"#d5f0f1",
+        "blaco-traslucente":"#FFDFAA"
+      
       },
       fontFamily: {
         'IBM-Plex': ['"IBM Plex Sans"', 'sans-serif'] // Ensure fonts with spaces have " " surrounding it.

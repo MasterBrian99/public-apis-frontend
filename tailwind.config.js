@@ -17,6 +17,9 @@ module.exports = {
       fontFamily: {
         'IBM-Plex': ['"IBM Plex Sans"', 'sans-serif'] // Ensure fonts with spaces have " " surrounding it.
       },
+      spacing: {
+        '100': '28rem',
+      }
     },
   },
   variants: {

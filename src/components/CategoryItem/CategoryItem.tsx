@@ -1,9 +1,18 @@
 import React from "react";
 
-const CategoryItem = () => {
+interface Props {
+  name: string;
+}
+
+const CategoryItem = ({ name }: Props) => {
   return (
-    <div className="flex items-center justify-center h-16 max-w-full m-4 transition duration-500 transform shadow-xl cursor-pointer bg-aniston-light w-72 hover:scale-105">
-      <h3 className="text-lg text-black ">Software Tools Loremss </h3>
+    <div
+      onClick={() => {
+        console.log("Hello");
+      }}
+      className="flex items-center justify-center h-16 max-w-full m-4 transition duration-500 transform shadow-xl cursor-pointer bg-aniston-light w-72 hover:scale-105"
+    >
+      <h3 className="text-lg text-black ">{name}</h3>
     </div>
   );
 };

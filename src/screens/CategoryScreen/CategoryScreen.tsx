@@ -7,21 +7,37 @@ import Loader from "react-loader-spinner";
 import { Redirect } from "react-router";
 import axios from "axios";
 
-const CategoryScreen = () => {
+interface Prop {
+  API: string;
+  Description: string;
+  Auth: string;
+  HTTPS: boolean;
+  Cors: string;
+  Link: string;
+  Category: string;
+}
+
+const CategoryScreen: React.FC = () => {
   const entity = useRecoilValue(categoryEntity);
-  const [state, setState] = useState("");
-  function fet() {
-    axios
-      .get("https://api.publicapis.org/entries?category=" + state)
-      .then((res) => {
-        console.log(res.data);
-      });
-  }
+
+  const [entityItems, setEntityItems] = useState<Prop[]>([]!);
 
   useEffect(() => {
-    setState(entity);
-    fet();
-  }, [state]);
+    if (entity.length === 0) {
+    } else {
+      axios
+        .get("https://api.publicapis.org/entries?category=" + entity)
+        .then((res) => {
+          console.log(res.data.entries);
+          setEntityItems(res.data.entries);
+        })
+        .catch(() => {});
+    }
+
+    return () => {
+      setEntityItems([]);
+    };
+  }, [entity]);
 
   return (
     <>
@@ -47,13 +63,18 @@ const CategoryScreen = () => {
             </div>
 
             <div className="flex flex-wrap items-center justify-center ">
-              <EntriesItem />
-              <EntriesItem />
-              <EntriesItem />
-              <EntriesItem />
-              <EntriesItem />
-              <EntriesItem />
-              <EntriesItem />
+              {entityItems.map((e, i) => (
+                <EntriesItem
+                  api={e.API}
+                  auth={e.Auth}
+                  category={e.Category}
+                  cors={e.Cors}
+                  description={e.Description}
+                  https={e.HTTPS}
+                  key={i}
+                  link={e.Link}
+                />
+              ))}
             </div>
           </div>
         </>

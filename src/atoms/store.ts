@@ -21,3 +21,8 @@ import axios from 'axios';
     key: 'categoryEntityState', // unique ID (with respect to other atoms/selectors)
     default: 'noValue', // default value (aka initial value)
   });
+
+  export const searchEntity=atom({
+    key:'searchEntityState',
+    default:'anime'
+  })

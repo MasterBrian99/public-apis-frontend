@@ -1,4 +1,4 @@
-import {selector} from 'recoil';
+import {selector,atom} from 'recoil';
 import axios from 'axios';
 
   export const categoryAtom = selector<[]>({
@@ -14,7 +14,10 @@ import axios from 'axios';
     },
   });
 
-  // export const categoryAtom = atom<[]>({
-  //   key: 'categoryAtomState', // unique ID (with respect to other atoms/selectors)
-  //   default: currentUserNameQuery, // default value (aka initial value)
-  // });
+
+
+
+  export const categoryEntity = atom({
+    key: 'categoryEntityState', // unique ID (with respect to other atoms/selectors)
+    default: 'noValue', // default value (aka initial value)
+  });

@@ -1,5 +1,9 @@
 import {selector,atom} from 'recoil';
 import axios from 'axios';
+import { SiTailwindcss,SiReact,SiTypescript } from "react-icons/si";
+
+
+
 
   export const categoryAtom = selector<[]>({
     key: 'categorySelector',
@@ -25,4 +29,25 @@ import axios from 'axios';
   export const searchEntity=atom({
     key:'searchEntityState',
     default:'anime'
+  })
+
+  export const madeEntity=atom({
+    key:'madeEntityState',
+    default:[
+      {
+        "id":1,
+        "name":"Tailwind",
+        "icon":SiTailwindcss
+      },
+      {
+        "id":1,
+        "name":"React",
+        "icon":SiReact
+      },
+      {
+        "id":1,
+        "name":"Typescript",
+        "icon":SiTypescript
+      }
+    ]
   })

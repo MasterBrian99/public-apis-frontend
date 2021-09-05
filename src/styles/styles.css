@@ -1,16 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
-body{
-    background:#F8FCFF;
-min-height: 100vh;
-height: 100%;
-width: 100%;
-}
-
-.color-lighting-thief{
-    color: #727AA9;
-}
-
-
-.color-dark-blue{
-    background-color: #43496D;
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap");
+body {
+  background: #f8fcff;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
 }

@@ -21,7 +21,6 @@ interface Prop {
 const SearchScreen = () => {
   const searchValue = useRecoilValue(searchEntity);
   const [entityItems, setEntityItems] = useState<Prop[]>([]!);
-  console.log(searchValue);
 
   useEffect(() => {
     setEntityItems([]);
@@ -29,7 +28,6 @@ const SearchScreen = () => {
       .get(`https://api.publicapis.org/entries?title=${searchValue}`)
       .then((res) => {
         setEntityItems(res.data.entries);
-        console.log(res.data.entries);
       });
 
     return () => {};

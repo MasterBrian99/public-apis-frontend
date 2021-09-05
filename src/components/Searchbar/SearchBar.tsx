@@ -20,7 +20,7 @@ const SearchBar = () => {
     notify();
   }
 
-  const [searchState, setSearchState] = useRecoilState(searchEntity);
+  const [, setSearchState] = useRecoilState(searchEntity);
 
   return (
     <>

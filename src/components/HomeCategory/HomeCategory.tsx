@@ -9,7 +9,9 @@ const HomeCategory = () => {
   return (
     <div className="flex flex-col items-center justify-center font-IBM-Plex">
       <div className="pt-10 pb-10">
-        <h1 className="text-4xl font-bold text-black">BROWSE BY CATEGORY</h1>
+        <h1 className="font-bold text-center text-black text-2 xl sm:text-3xl lg:text-3xl xl:text-4xl 2xl:text-4xl">
+          BROWSE BY CATEGORY
+        </h1>
       </div>
       <div className="container flex flex-wrap justify-center mx-auto">
         {category.length === 0 ? (

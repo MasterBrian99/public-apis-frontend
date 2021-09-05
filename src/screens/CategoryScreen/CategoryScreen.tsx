@@ -28,7 +28,6 @@ const CategoryScreen: React.FC = () => {
       axios
         .get("https://api.publicapis.org/entries?category=" + entity)
         .then((res) => {
-          console.log(res.data.entries);
           setEntityItems(res.data.entries);
         })
         .catch(() => {});

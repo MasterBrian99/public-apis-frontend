@@ -30,7 +30,7 @@ const NavigationLg = () => {
         <img
           src={Logo}
           alt="logo"
-          className="w-32 cursor-pointer"
+          className="cursor-pointer w-36"
           onClick={() => history.push("/")}
         />
         <ul className="flex">

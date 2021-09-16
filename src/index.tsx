@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
@@ -10,7 +10,7 @@ import Loader from "react-loader-spinner";
 ReactDOM.render(
   <React.StrictMode>
     <RecoilRoot>
-      <React.Suspense
+      <Suspense
         fallback={
           <div className="flex items-center justify-center w-screen h-screen">
             <Loader
@@ -24,7 +24,7 @@ ReactDOM.render(
         }
       >
         <App />
-      </React.Suspense>
+      </Suspense>
     </RecoilRoot>
   </React.StrictMode>,
   document.getElementById("root")
